@@ -52,7 +52,7 @@ export class TodoFormComponent implements OnInit {
 
   public handleCreateTodo():void {
     if(!this.todoForm || this.todoForm.invalid) return
-    const id = Number(this.allTodos.length++)
+    const id = Number(++this.allTodos.length)
     const title = String(this.todoForm.controls['title'].value)
     const description = String(this.todoForm.controls['description'].value)
     const done = false

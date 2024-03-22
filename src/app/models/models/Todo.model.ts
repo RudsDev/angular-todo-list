@@ -8,7 +8,8 @@ export class Todo {
   ) {}
 
   public isValid(): boolean {
-    return Object.values(this).every(i => !!i)
+    const { id, title, description } = this
+    return Object.values({ id, title, description }).every(i => !!i)
   }
 
 }
